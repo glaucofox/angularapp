@@ -10,22 +10,20 @@ export class UserComponent
 {
 
     firstName = 'John';
-    lastName = 'Doe';
+    lastName = 'Smith';
+    address = {
+        street: '50 Main St.',
+        city: 'Boston',
+        state: 'MA'
+    }
     age = 30;
 
     constructor() {
-        // this.sayHello();
-        console.log(this.age);
-        this.hasBirthday();
-        console.log(this.age);
+
     }
 
-    sayHello() {
-        console.log(`Hello ${this.firstName} ${this.lastName}... `);
-    }
-
-    hasBirthday() {
-        this.age++;
+    showAge() {
+        return this.age;
     }
 
 }
