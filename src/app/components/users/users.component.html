@@ -17,7 +17,7 @@
                         until {{ .5 | percent }}</li>
                     <!-- Options for Date Pipe: fullDate, shortDate, longDate, mm/dd/yyyy, shortTime, longTime -->
                     <li class="list-group-item">Joined: {{ user.registered | date }}</li> 
-                    <li class="list-group-item">{{ 5 | number:"2.4" }}</li>
+                    <li class="list-group-item" ngNonBindable>{{ 5 | number:"2.4" }}</li>
                 </ul>
             </div>
         </div>
