@@ -8,10 +8,11 @@ import { User } from '../../models/User';
 })
 export class UsersComponent implements OnInit {
 
-    users: User[] = []
+    users: User[]
     showExtended: boolean = true
     loaded: boolean = false
     enableAdd: boolean = true
+    showUserForm:boolean = false
 
     constructor() { }
 
@@ -65,6 +66,16 @@ export class UsersComponent implements OnInit {
 
     addUser(user: User) {
         this.users.push(user)
+    }
+
+    onSubmit(e) {
+        e.preventDefault();
+        console.log(123);
+    }
+
+    fireEvent(e) {
+        console.log(e.type);
+        console.log(e.target.value);
     }
 
 }
